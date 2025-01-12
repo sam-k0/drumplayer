@@ -196,7 +196,7 @@ function interpretTaikoMap()
 					show_debug_message("--> BPMCHANGE: "+cmdarg);
 					var inst = instance_create_depth(CURRENT_SPAWNX,y-16,1,obj_note);
 					inst.text = "BPM: "+string(cmdarg);
-					//currBPM = cmdarg;
+					currBPM = cmdarg;
 				break;
 			
 				case 3: // MEASURE
@@ -278,56 +278,16 @@ function interpretTaikoMap()
 			
 			
 				// Iterate all notes
-				//var newnote;
 				
-				for(var n = 0; n < noteCount; n++)
+				for(var n = 0; n < noteCount; n++) // each note in the string
 				{
 					var noteTypeChar = string_char_at(rawNotes,n+1);
 					
-					if(noteTypeChar == "")
+					if(noteTypeChar == "") // if empty (aka, empty row -> disregard)
 					{
 						continue;
 					}
 					
-					/*var varStruct = { // Common variables
-						scrollspeed : noteScrollSpeed,
-						
-					};
-					
-					switch(noteTypeChar)
-					{
-						case "1": // Don
-						varStruct[$ "image_xscale"] = 0.5
-						varStruct[$ "image_yscale"] = 0.5
-						varStruct[$ "sprite_index"] = spr_noteRedSmall
-						varStruct[$ "hitsound"] = snd_don
-						instance_create_depth(CURRENT_SPAWNX,y,0,obj_drumNote, varStruct);		
-						break;
-						
-						case "2": // Ka
-						varStruct[$ "image_xscale"] = 0.5
-						varStruct[$ "image_yscale"] = 0.5
-						varStruct[$ "sprite_index"] = spr_noteBlueSmall
-						varStruct[$ "hitsound"] = snd_katsu
-						instance_create_depth(CURRENT_SPAWNX,y,0,obj_drumNote, varStruct);		
-						break;
-						
-						case "3": // Big Don
-						varStruct[$ "image_xscale"] = 0.7
-						varStruct[$ "image_yscale"] = 0.7
-						varStruct[$ "sprite_index"] = spr_noteRedSmall
-						varStruct[$ "hitsound"] = snd_don
-						instance_create_depth(CURRENT_SPAWNX,y,0,obj_drumNote, varStruct);	
-						break;
-						
-						case "4": // Big Ka
-						varStruct[$ "image_xscale"] = 0.7
-						varStruct[$ "image_yscale"] = 0.7
-						varStruct[$ "sprite_index"] = spr_noteBlueSmall
-						varStruct[$ "hitsound"] = snd_katsu
-						instance_create_depth(CURRENT_SPAWNX,y,0,obj_drumNote, varStruct);	
-						break;
-					}*/
 					var varStruct = { // Common variables
 					    scrollspeed: noteScrollSpeed
 					};

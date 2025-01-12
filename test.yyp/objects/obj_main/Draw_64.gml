@@ -3,5 +3,7 @@
 
 
 draw_text(32,32,SONG_NAME)
-draw_text(32,64,string(BPM))
+draw_text(32,64,"BPM:"+string(BPM))
+
+
 
