@@ -1,0 +1,17 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"obj_audiocontrol","order":5,"path":"objects/obj_audiocontrol/obj_audiocontrol.yy",},
+    {"name":"obj_background","order":4,"path":"objects/obj_background/obj_background.yy",},
+    {"name":"obj_drumNote","order":1,"path":"objects/obj_drumNote/obj_drumNote.yy",},
+    {"name":"obj_note","order":3,"path":"objects/obj_note/obj_note.yy",},
+    {"name":"obj_noteBlueSmall","order":2,"path":"objects/obj_noteBlueSmall/obj_noteBlueSmall.yy",},
+    {"name":"mus_song","order":2,"path":"sounds/mus_song/mus_song.yy",},
+    {"name":"snd_don","order":1,"path":"sounds/snd_don/snd_don.yy",},
+    {"name":"bg_default","order":5,"path":"sprites/bg_default/bg_default.yy",},
+    {"name":"spr_backgroundRow","order":6,"path":"sprites/spr_backgroundRow/spr_backgroundRow.yy",},
+    {"name":"spr_cursorPos","order":4,"path":"sprites/spr_cursorPos/spr_cursorPos.yy",},
+    {"name":"spr_noteBlueSmall","order":2,"path":"sprites/spr_noteBlueSmall/spr_noteBlueSmall.yy",},
+    {"name":"spr_sidenote","order":3,"path":"sprites/spr_sidenote/spr_sidenote.yy",},
+  ],
+}

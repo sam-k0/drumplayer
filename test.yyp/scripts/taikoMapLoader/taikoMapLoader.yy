@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"taikoMapLoader",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"taikoMapLoader",
+  "parent":{
+    "name":"Skripte",
+    "path":"folders/Skripte.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
