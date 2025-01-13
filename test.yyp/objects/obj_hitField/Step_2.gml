@@ -1,5 +1,4 @@
-/// @description Hier Beschreibung einfügen
-// Sie können Ihren Code in diesem Editor schreiben
+/// @description Move view
 
 #region move view
 

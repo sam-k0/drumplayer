@@ -61,6 +61,7 @@
     {"id":{"name":"spr_noteBlueSmall","path":"sprites/spr_noteBlueSmall/spr_noteBlueSmall.yy",},},
     {"id":{"name":"spr_noteRedSmall","path":"sprites/spr_noteRedSmall/spr_noteRedSmall.yy",},},
     {"id":{"name":"spr_sidenote","path":"sprites/spr_sidenote/spr_sidenote.yy",},},
+    {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
