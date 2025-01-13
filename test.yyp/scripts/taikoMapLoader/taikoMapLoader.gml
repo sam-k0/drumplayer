@@ -5,7 +5,7 @@ function loadTaikoMap()
 	globalvar MAP_FILE_ID;
 
 
-	MAP_FILE_NAME = "6662.tja"
+	MAP_FILE_NAME = "Evidence of evil.tja"
 	if(MAP_FILE_NAME != "")
 	{
 		MAP_FILE_ID=file_text_open_read(MAP_FILE_NAME);
@@ -122,7 +122,6 @@ function getTaikoCommand(linestr)
 	    return 4;
 	}
 	
-	
 	return 0; // its raw data
 	
 	
@@ -161,8 +160,8 @@ function handleTaikoCmd(linestr, command)
 function interpretTaikoMap()
 {
 	var rowCount = 1;	
-	var currUpper = 0;
-	var currLower = 0;
+	var currUpper = 4; // Assuming 4/4 measure
+	var currLower = 4;
 	var currBPM = BPM; // Gets set in bottom, this is just placeholder
 	
 	// Loop through the whole TJA Array storing the contents of the TJA file
@@ -194,7 +193,7 @@ function interpretTaikoMap()
 			
 				case 2: // BPMCHANGE
 					show_debug_message("--> BPMCHANGE: "+cmdarg);
-					var inst = instance_create_depth(CURRENT_SPAWNX,y-16,1,obj_note);
+					var inst = instance_create_depth(CURRENT_SPAWNX,y-16,1,obj_noteRow);
 					inst.text = "BPM: "+string(cmdarg);
 					currBPM = cmdarg;
 				break;
@@ -252,14 +251,16 @@ function interpretTaikoMap()
 			// Is it data?
 			if(string_char_at(line,string_length(line)) == ",") // Checks if line ends with ,
 			{
-				
-				
 				// create row note
-				var inst = instance_create_depth(CURRENT_SPAWNX,y,1,obj_note);
+				var inst = instance_create_depth(CURRENT_SPAWNX,y,1,obj_noteRow);
 				inst.text = string(rowCount);
 			
 				// Data row
 				var rawNotes = string_replace_all(line,",",""); // Delete all , from line to get note types
+				if(rawNotes == "")
+				{
+					rawNotes = "0"
+				}
 				var noteCount = max(string_length(rawNotes),1);
 			
 			
@@ -278,7 +279,6 @@ function interpretTaikoMap()
 			
 			
 				// Iterate all notes
-				
 				for(var n = 0; n < noteCount; n++) // each note in the string
 				{
 					var noteTypeChar = string_char_at(rawNotes,n+1);
@@ -323,6 +323,11 @@ function interpretTaikoMap()
 			{
 				BPM = real(string_replace(line,"BPM:",""));
 				currBPM = BPM;
+			}
+			
+			if(string_copy(line, 1,6) == "OFFSET")
+			{
+				TIME_OFFSET = real(string_replace(line, "OFFSET:",""))*-1;
 			}
 		}
 	}

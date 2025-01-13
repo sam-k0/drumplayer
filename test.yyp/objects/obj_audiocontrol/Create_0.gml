@@ -1,1 +1,3 @@
-audio_play_sound(mus_song, 0,false)
+songstream = audio_create_stream(songfile) // songfile is expected as struct arg
+playbackid = audio_play_sound_ext({sound: songstream});
+
