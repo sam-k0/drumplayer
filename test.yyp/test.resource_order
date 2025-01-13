@@ -10,6 +10,8 @@
     {"name":"bg_default","order":5,"path":"sprites/bg_default/bg_default.yy",},
     {"name":"spr_backgroundRow","order":6,"path":"sprites/spr_backgroundRow/spr_backgroundRow.yy",},
     {"name":"spr_cursorPos","order":4,"path":"sprites/spr_cursorPos/spr_cursorPos.yy",},
+    {"name":"spr_drumGame","order":8,"path":"sprites/spr_drumGame/spr_drumGame.yy",},
+    {"name":"spr_hitField","order":7,"path":"sprites/spr_hitField/spr_hitField.yy",},
     {"name":"spr_noteBlueSmall","order":2,"path":"sprites/spr_noteBlueSmall/spr_noteBlueSmall.yy",},
     {"name":"spr_sidenote","order":3,"path":"sprites/spr_sidenote/spr_sidenote.yy",},
   ],

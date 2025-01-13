@@ -1,12 +1,12 @@
-/// @description Hier Beschreibung einfügen
+/// @description Init variables
 globalvar CELL_COEFFICIENT; // How far to spread out cells
-CELL_COEFFICIENT = 1.5
+CELL_COEFFICIENT = 2.0;
 
 globalvar CURRENT_SPAWNX; // starting spawnx
 CURRENT_SPAWNX = 0;
 
 globalvar SPAWN_MULTIPLIER; // 
-SPAWN_MULTIPLIER = 8;
+SPAWN_MULTIPLIER = 10;
 
 globalvar CURRENT_SCROLL_COEFFICIENT; // Note speed multiplier
 CURRENT_SCROLL_COEFFICIENT = 1.0;
@@ -34,3 +34,7 @@ if(result)
 	});
 	
 }
+
+// Visual
+image_xscale = 0.5
+image_yscale = 0.5

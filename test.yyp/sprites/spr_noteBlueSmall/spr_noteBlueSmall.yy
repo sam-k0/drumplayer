@@ -23,7 +23,7 @@
   ],
   "name":"spr_noteBlueSmall",
   "nineSlice":null,
-  "origin":1,
+  "origin":4,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":56,
-    "yorigin":0,
+    "yorigin":56,
   },
   "swatchColours":null,
   "swfPrecision":2.525,
