@@ -11,3 +11,8 @@ for(var i = 0; i < array_length(combined_inputs); i++)
 {
 	draw_sprite_ext(spr_drumGame, 1+i, x-150, y,1,1,0,c_white, combined_inputs[i]);
 }
+
+
+draw_sprite(spr_difficultyIcon, diff_subimg, x-300, y);
+
+

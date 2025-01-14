@@ -3,7 +3,7 @@ globalvar CELL_COEFFICIENT; // How far to spread out cells
 CELL_COEFFICIENT = 2.0;
 
 globalvar CURRENT_SPAWNX; // starting spawnx
-CURRENT_SPAWNX = 0;
+CURRENT_SPAWNX =x;
 
 globalvar SPAWN_MULTIPLIER; // 
 SPAWN_MULTIPLIER = 10;
@@ -15,9 +15,9 @@ CURRENT_SCROLL_COEFFICIENT = 1.0;
 globalvar SONG_NAME, DIFFICULTY, BPM, TIME_OFFSET;
 
 SONG_NAME = "n/a"; // Shown song name
-DIFFICULTY = "n/a"; // unused
-TIME_OFFSET = 0; // 1 = start one second later
-BPM = 0;// BPM of the song
+DIFFICULTY = "n/a"; //string, "Oni"
+TIME_OFFSET = 0; // 1 = start one second later (given by OFFSET data)
+BPM = 180;// BPM of the song
 
 
 
@@ -35,3 +35,5 @@ if(result)
 	});
 	
 }
+
+instance_create_layer(x,y,"Instances", obj_hitField)

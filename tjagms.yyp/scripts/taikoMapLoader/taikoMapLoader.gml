@@ -193,8 +193,8 @@ function interpretTaikoMap()
 			
 				case 2: // BPMCHANGE
 					show_debug_message("--> BPMCHANGE: "+cmdarg);
-					var inst = instance_create_depth(CURRENT_SPAWNX,y-16,1,obj_noteRow);
-					inst.text = "BPM: "+string(cmdarg);
+					//var inst = instance_create_depth(CURRENT_SPAWNX,y-16,1,obj_noteRow);
+					//inst.text = "BPM: "+string(cmdarg);
 					currBPM = cmdarg;
 				break;
 			
@@ -252,8 +252,8 @@ function interpretTaikoMap()
 			if(string_char_at(line,string_length(line)) == ",") // Checks if line ends with ,
 			{
 				// create row note
-				var inst = instance_create_depth(CURRENT_SPAWNX,y,1,obj_noteRow);
-				inst.text = string(rowCount);
+				//var inst = instance_create_depth(CURRENT_SPAWNX,y,1,obj_noteRow);
+				//inst.text = string(rowCount);
 			
 				// Data row
 				var rawNotes = string_replace_all(line,",",""); // Delete all , from line to get note types
@@ -313,10 +313,10 @@ function interpretTaikoMap()
 				rowCount += 1;			
 			}
 	
-			// Is it title?
+			// Static data
 			if(string_copy(line,1,5) == "TITLE")
 			{
-				SONG_NAME = string_replace(line,"TITLE: ","");
+				SONG_NAME = string_trim(string_replace(line,"TITLE:",""));
 			}
 			
 			if(string_copy(line,1,3) == "BPM")
@@ -328,6 +328,11 @@ function interpretTaikoMap()
 			if(string_copy(line, 1,6) == "OFFSET")
 			{
 				TIME_OFFSET = real(string_replace(line, "OFFSET:",""))*-1;
+			}
+			
+			if(string_copy(line, 1,6) == "COURSE")
+			{
+				DIFFICULTY = string_trim(string_replace(line, "COURSE:","")) 
 			}
 		}
 	}
