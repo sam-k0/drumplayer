@@ -8,6 +8,7 @@ A feature incomplete, experimental player for .tja files.
 - [ ] #BPMCHANGE
 - [ ] Subtitles
 - [ ] Drumrolls
+
 ... and many more missing
 
 # Platform Support
