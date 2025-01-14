@@ -44,6 +44,7 @@
     {"id":{"name":"obj_audiocontrol","path":"objects/obj_audiocontrol/obj_audiocontrol.yy",},},
     {"id":{"name":"obj_background","path":"objects/obj_background/obj_background.yy",},},
     {"id":{"name":"obj_drumNote","path":"objects/obj_drumNote/obj_drumNote.yy",},},
+    {"id":{"name":"obj_gamecontrol","path":"objects/obj_gamecontrol/obj_gamecontrol.yy",},},
     {"id":{"name":"obj_hitField","path":"objects/obj_hitField/obj_hitField.yy",},},
     {"id":{"name":"obj_noteRow","path":"objects/obj_noteRow/obj_noteRow.yy",},},
     {"id":{"name":"path_hit","path":"paths/path_hit/path_hit.yy",},},

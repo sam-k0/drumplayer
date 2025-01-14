@@ -4,6 +4,7 @@
     {"name":"obj_audiocontrol","order":5,"path":"objects/obj_audiocontrol/obj_audiocontrol.yy",},
     {"name":"obj_background","order":4,"path":"objects/obj_background/obj_background.yy",},
     {"name":"obj_drumNote","order":1,"path":"objects/obj_drumNote/obj_drumNote.yy",},
+    {"name":"obj_gamecontrol","order":6,"path":"objects/obj_gamecontrol/obj_gamecontrol.yy",},
     {"name":"obj_noteRow","order":3,"path":"objects/obj_noteRow/obj_noteRow.yy",},
     {"name":"mus_song","order":2,"path":"sounds/mus_song/mus_song.yy",},
     {"name":"snd_don","order":1,"path":"sounds/snd_don/snd_don.yy",},

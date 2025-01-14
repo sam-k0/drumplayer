@@ -293,7 +293,7 @@ function interpretTaikoMap()
 					};
 					
 					// Determine note properties
-					var imageScale = (noteTypeChar == "3" || noteTypeChar == "4") ? 0.7 : 0.5;
+					var imageScale = (noteTypeChar == "3" || noteTypeChar == "4") ? 1.2 : 1.0;
 					var spriteIndex = (noteTypeChar == "1" || noteTypeChar == "3") ? spr_noteRedSmall : spr_noteBlueSmall;
 					var hitSound = (noteTypeChar == "1" || noteTypeChar == "3") ? snd_don : snd_katsu;
 					

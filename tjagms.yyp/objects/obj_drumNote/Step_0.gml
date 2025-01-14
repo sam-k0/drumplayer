@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+
 if(active)
 {
 	 x-= scrollspeed * delta_time / 1000000 * 60;

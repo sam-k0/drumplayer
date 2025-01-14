@@ -1,7 +1,5 @@
-/// @description Draw drums
-
+/// @description Draw drums and self
 draw_self();
-
 // drums
 draw_sprite(spr_drumGame, 0, x-150,y);
 
