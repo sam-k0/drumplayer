@@ -1,11 +1,11 @@
 
-function loadTaikoMap()
+function loadTaikoMap(filename)
 { // Opens a tja file for reading
 	globalvar MAP_FILE_NAME;
 	globalvar MAP_FILE_ID;
 
 
-	MAP_FILE_NAME = "Evidence of evil.tja"
+	MAP_FILE_NAME = filename;
 	if(MAP_FILE_NAME != "")
 	{
 		MAP_FILE_ID=file_text_open_read(MAP_FILE_NAME);
@@ -302,10 +302,11 @@ function interpretTaikoMap()
 					varStruct[$ "image_yscale"] = imageScale;
 					varStruct[$ "sprite_index"] = spriteIndex;
 					varStruct[$ "hitsound"] = hitSound;
+					varStruct[$ "noteType"] = real(noteTypeChar);
 					
 					// Create the instance
 					if (noteTypeChar == "1" || noteTypeChar == "2" || noteTypeChar == "3" || noteTypeChar == "4") {
-					    instance_create_depth(CURRENT_SPAWNX, y, 0, obj_drumNote, varStruct);
+					    instance_create_layer(CURRENT_SPAWNX, y, "SpawnedNotes", obj_drumNote, varStruct);
 					}
 				
 					CURRENT_SPAWNX = CURRENT_SPAWNX+noteDist

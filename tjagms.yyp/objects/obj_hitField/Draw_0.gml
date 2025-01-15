@@ -14,5 +14,3 @@ for(var i = 0; i < array_length(combined_inputs); i++)
 
 
 draw_sprite(spr_difficultyIcon, diff_subimg, x-300, y);
-
-
