@@ -8,7 +8,9 @@ function isHit()
 	{
 		return;
 	}
-	audio_play_sound(hitsound, 0, 0) // Don/Katsu
+	audio_play_sound_ext({
+		sound: hitsound,// Don/Katsu
+		gain: 0.2}) 
 	// Set position to start path to make sure all notes have the same path
 	x = obj_hitField.x;
 	y = obj_hitField.y
@@ -17,4 +19,5 @@ function isHit()
 	active = false; // do not play sounds / path multiple times
 	// change layer to bg
 	layer_add_instance("Instances_hitnotes", id);
+	obj_hitField.combo ++;
 }

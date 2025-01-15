@@ -19,11 +19,11 @@ DIFFICULTY = "n/a"; //string, "Oni"
 TIME_OFFSET = 0; // 1 = start one second later (given by OFFSET data)
 BPM = 180;// BPM of the song
 
-
+show_debug_log(true)
 
 SONGFILE = "Evidence of evil.ogg";
 
-var result = loadTaikoMap("eoee.tja");
+var result = loadTaikoMap("Evidence of evil.tja");
 
 if(result)
 {

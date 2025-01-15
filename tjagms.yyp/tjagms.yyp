@@ -61,6 +61,7 @@
     {"id":{"name":"spr_cursorPos","path":"sprites/spr_cursorPos/spr_cursorPos.yy",},},
     {"id":{"name":"spr_difficultyIcon","path":"sprites/spr_difficultyIcon/spr_difficultyIcon.yy",},},
     {"id":{"name":"spr_drumGame","path":"sprites/spr_drumGame/spr_drumGame.yy",},},
+    {"id":{"name":"spr_fnt_combo","path":"sprites/spr_fnt_combo/spr_fnt_combo.yy",},},
     {"id":{"name":"spr_genrelabel","path":"sprites/spr_genrelabel/spr_genrelabel.yy",},},
     {"id":{"name":"spr_hitField","path":"sprites/spr_hitField/spr_hitField.yy",},},
     {"id":{"name":"spr_lanebgborder","path":"sprites/spr_lanebgborder/spr_lanebgborder.yy",},},

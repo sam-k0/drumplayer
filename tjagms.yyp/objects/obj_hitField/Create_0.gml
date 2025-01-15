@@ -3,7 +3,7 @@
 image_xscale = 1
 image_yscale = 1
 
-
+combo = 0;
 // Controls
 don_keys = [ord("F"), ord("G")];
 katsu_keys = [ord("J"), ord("K")];
@@ -40,8 +40,6 @@ function checkNoteCollision(type)
         true
     );
 
-    // Debug message for testing
-    show_debug_message(ds_list_size(next_notes_list));
 
     if (ds_list_size(next_notes_list) == 0) {
         return -1;
@@ -55,11 +53,46 @@ function checkNoteCollision(type)
         // Ensure note is valid and active
         if (note != noone && note.active && array_contains(type, note.noteType)) 
         {
-             note.isHit();	
+        	var d = point_distance(x,y,note.x,y);
+            note.isHit();	
+            
+            if (d < 12)
+            {
+            	show_debug_message("perfect")
+            }
+            else
+            if (d < 32)
+            {
+            	show_debug_message("Good")
+            }
+            else
+            if (d < 50)
+            {
+            	show_debug_message("Alright")
+            }
+            show_debug_message("Dist:" + string(d))
+            break;
            
         }
     }
 }
+
+function getComboScale(comboValue) {
+    // Calculate the number of digits in the combo value
+    var numDigits = string_length(string(comboValue));
+    
+    // Set the scaling factor
+    // You can tweak these values for desired results
+    var maxScale = 1.0;       // Max scale for 3 digits (or fewer)
+    var minScale = 0.2;       // Minimum scale for very large numbers
+    var scaleFactor = 0.2;    // How much to shrink with each extra digit
+
+    // Calculate the scale based on the number of digits
+    var scale = max(minScale, maxScale - (numDigits - 3) * scaleFactor);
+    
+    return clamp(scale, 0,1);
+}
+
 
 
 

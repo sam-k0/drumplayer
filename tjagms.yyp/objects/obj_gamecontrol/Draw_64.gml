@@ -16,6 +16,7 @@ draw_set_halign(fa_center) // Set halign
 draw_set_valign(fa_middle)
 var drumscale = max(0,sin(current_time*0.01)*0.2);
 draw_sprite_ext(spr_drumGame, 0, vw-bpmbgw/2 - bpmbgoff, 200, 0.7+drumscale,0.7+drumscale, 0,c_white, 1)
+
 draw_text_color(vw-bpmbgw/2 - bpmbgoff, 180, "BPM\n"+string(BPM), c_black, c_black, c_black, c_black, 1.0);
 
 
