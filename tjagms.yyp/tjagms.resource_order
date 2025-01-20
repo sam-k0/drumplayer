@@ -7,6 +7,7 @@
     {"name":"obj_font_manager","order":7,"path":"objects/obj_font_manager/obj_font_manager.yy",},
     {"name":"obj_gamecontrol","order":6,"path":"objects/obj_gamecontrol/obj_gamecontrol.yy",},
     {"name":"obj_noteRow","order":3,"path":"objects/obj_noteRow/obj_noteRow.yy",},
+    {"name":"filediscover","order":1,"path":"scripts/filediscover/filediscover.yy",},
     {"name":"mus_song","order":2,"path":"sounds/mus_song/mus_song.yy",},
     {"name":"snd_don","order":1,"path":"sounds/snd_don/snd_don.yy",},
     {"name":"bg_lane","order":9,"path":"sprites/bg_lane/bg_lane.yy",},

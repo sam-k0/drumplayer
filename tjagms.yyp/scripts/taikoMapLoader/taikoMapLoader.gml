@@ -84,7 +84,7 @@ function readTaikoMap() // Reads contents of the tja file opened
 	// Debug: Print map
 	for(i = 0; i<array_length(TJA_ARRAY);i++)
 	{
-		show_debug_message(string(i) + " : "+string(TJA_ARRAY[i]))
+		//show_debug_message(string(i) + " : "+string(TJA_ARRAY[i]))
 	}
 
 }
@@ -269,13 +269,13 @@ function interpretTaikoMap()
 				//show_debug_message("Calling calcRoWLen {0}, {1} ", currUpper, cellLen);
 				var rowLenPx = (real(currUpper) * real(cellLen)) * SPAWN_MULTIPLIER;
 				
-				show_debug_message("calcNoteScrollSpeed({0}, {1}, {2}) and COEFF {3}", rowLenPx, currUpper, currBPM, CURRENT_SCROLL_COEFFICIENT );
+				//show_debug_message("calcNoteScrollSpeed({0}, {1}, {2}) and COEFF {3}", rowLenPx, currUpper, currBPM, CURRENT_SCROLL_COEFFICIENT );
 				
 				// Calc scroll speed
 				var noteScrollSpeed = calcNoteScrollSpeed(rowLenPx, currUpper, currBPM);
 			
 			
-				show_debug_message(" CurrentSpawnx: {0}, cellLen {1}, noteDist {2} currUpper: {3} noteCount {4} spawnmult {5} scrollspd {6}", CURRENT_SPAWNX, cellLen, noteDist, currUpper, noteCount, SPAWN_MULTIPLIER, noteScrollSpeed);
+				//show_debug_message(" CurrentSpawnx: {0}, cellLen {1}, noteDist {2} currUpper: {3} noteCount {4} spawnmult {5} scrollspd {6}", CURRENT_SPAWNX, cellLen, noteDist, currUpper, noteCount, SPAWN_MULTIPLIER, noteScrollSpeed);
 			
 			
 				// Iterate all notes
@@ -335,6 +335,13 @@ function interpretTaikoMap()
 			{
 				DIFFICULTY = string_trim(string_replace(line, "COURSE:","")) 
 			}
+			
+			if(string_copy(line, 1,8) == "SUBTITLE")
+			{
+				// remove ++ / -- from the str
+				SUBTITLE = string_replace(string_replace(string_replace(line, "SUBTITLE:",""), "++", ""), "--", "" )
+			}
+			
 		}
 	}
 }
