@@ -20,6 +20,10 @@ TIME_OFFSET = 0; // 1 = start one second later (given by OFFSET data)
 SUBTITLE = ""; // SUBTITLE field. --/++ modifier is removed
 BPM = 180;// BPM of the song
 
+TIME_OFFSET_STATIC = 2*60; // for spawning notes further back, given in frames
+
+					
+
 show_debug_log(true)
 
 // Search songfiles
@@ -36,10 +40,11 @@ var result = loadTaikoMap("Evidence of evil.tja");
 if(result)
 {
 	readTaikoMap()
-	interpretTaikoMap()
+	interpretTaikoMap(TIME_OFFSET_STATIC);
 	// Start audio
 	instance_create_depth(0,0,0,obj_audiocontrol, {
-		songfile : SONGFILE
+		songfile : SONGFILE,
+		time_offset : TIME_OFFSET_STATIC
 	});
 	
 }

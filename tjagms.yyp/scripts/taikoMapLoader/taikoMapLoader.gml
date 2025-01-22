@@ -157,7 +157,7 @@ function handleTaikoCmd(linestr, command)
 	}
 }
 
-function interpretTaikoMap()
+function interpretTaikoMap(_time_offset)
 {
 	var rowCount = 1;	
 	var currUpper = 4; // Assuming 4/4 measure
@@ -306,7 +306,7 @@ function interpretTaikoMap()
 					
 					// Create the instance
 					if (noteTypeChar == "1" || noteTypeChar == "2" || noteTypeChar == "3" || noteTypeChar == "4") {
-					    instance_create_layer(CURRENT_SPAWNX, y, "SpawnedNotes", obj_drumNote, varStruct);
+					    instance_create_layer(CURRENT_SPAWNX+_time_offset*noteScrollSpeed, y, "SpawnedNotes", obj_drumNote, varStruct);
 					}
 				
 					CURRENT_SPAWNX = CURRENT_SPAWNX+noteDist
