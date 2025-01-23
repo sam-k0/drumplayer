@@ -17,6 +17,7 @@ function get_subdirs(_root_dir)
 	
 }
 
+// returns a struct with meta info about the map 
 function get_song_meta(tjaFilePath) {
     var title = "";
     var subtitle = "";
@@ -49,7 +50,7 @@ function get_song_meta(tjaFilePath) {
 }
 
 
-
+// returns an array of struct with info about found maps in provided directory
 function find_map_files(_root_dir=working_directory)
 {
 	var _found_maps = []

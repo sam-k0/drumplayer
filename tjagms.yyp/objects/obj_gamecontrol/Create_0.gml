@@ -11,7 +11,6 @@ SPAWN_MULTIPLIER = 15;
 globalvar CURRENT_SCROLL_COEFFICIENT; // Note speed multiplier
 CURRENT_SCROLL_COEFFICIENT = 1.0;
 
-
 globalvar SONG_NAME, DIFFICULTY, BPM, TIME_OFFSET, SUBTITLE;
 
 SONG_NAME = "n/a"; // Shown song name (TITLE data)
@@ -20,22 +19,16 @@ TIME_OFFSET = 0; // 1 = start one second later (given by OFFSET data)
 SUBTITLE = ""; // SUBTITLE field. --/++ modifier is removed
 BPM = 180;// BPM of the song
 
+// local variables
 TIME_OFFSET_STATIC = 2*60; // for spawning notes further back, given in frames
-
-					
+SONGFILE = "Evidence of evil.ogg";
+MAPFILE = "Evidence of evil.tja";
 
 show_debug_log(true)
 
 // Search songfiles
 
-var res = find_map_files(working_directory + "/songs")
-show_debug_message(res);
-
-
-
-SONGFILE = "Evidence of evil.ogg";
-
-var result = loadTaikoMap("Evidence of evil.tja");
+var result = loadTaikoMap(MAPFILE);
 
 if(result)
 {
