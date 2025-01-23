@@ -60,6 +60,7 @@
     {"id":{"name":"rm_songplay","path":"rooms/rm_songplay/rm_songplay.yy",},},
     {"id":{"name":"rm_songselect","path":"rooms/rm_songselect/rm_songselect.yy",},},
     {"id":{"name":"filediscover","path":"scripts/filediscover/filediscover.yy",},},
+    {"id":{"name":"input_by_arr","path":"scripts/input_by_arr/input_by_arr.yy",},},
     {"id":{"name":"taikoMapLoader","path":"scripts/taikoMapLoader/taikoMapLoader.yy",},},
     {"id":{"name":"mus_song","path":"sounds/mus_song/mus_song.yy",},},
     {"id":{"name":"snd_don","path":"sounds/snd_don/snd_don.yy",},},

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"input_by_arr",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"input_by_arr",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"1.0",
+}
