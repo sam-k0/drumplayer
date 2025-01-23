@@ -7,7 +7,7 @@ Provides a basic song browser and gameplay experience.
 # Game Features
 - [x] Standard notes (Don/Katsu)
 - [x] #SCROLL modifier
-- [ ] #BPMCHANGE
+- [ ] #BPMCHANGE (*kinda* working)
 - [ ] Subtitles
 - [ ] Drumrolls
 
