@@ -2,7 +2,9 @@
 
 A feature incomplete, experimental player for .tja files.
 
-# Features
+Provides a basic song browser and gameplay experience.
+
+# Game Features
 - [x] Standard notes (Don/Katsu)
 - [x] #SCROLL modifier
 - [ ] #BPMCHANGE
