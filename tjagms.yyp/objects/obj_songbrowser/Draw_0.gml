@@ -11,3 +11,7 @@ shader_reset()
 var acc = (current_index+num_boxes/2) % array_length(found_map_structs);
 
 draw_text(x+room_width/2+200,y,string(found_map_structs[acc][$ "title"]))
+var sprh= sprite_get_height(spr_songEntry);
+draw_sprite_ext(spr_songEntry, 0, //
+boxes[4].x,
+boxes[4].y, 1.05,1.05,0,c_red,0.4)

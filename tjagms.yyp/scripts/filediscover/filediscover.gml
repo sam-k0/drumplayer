@@ -81,7 +81,7 @@ function find_map_files(_root_dir=working_directory)
 				
 				array_push(_found_maps, {
 					title : _m[$ "title"],
-					subtitle : _m[$ "subtitle"],
+					subtitle : string_replace( _m[$ "subtitle"], "--", ""),
 					tja_file : _tja_file,
 					sound_file : _ogg_file,
 					dir_path : thisdir

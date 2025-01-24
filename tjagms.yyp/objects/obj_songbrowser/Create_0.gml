@@ -47,7 +47,7 @@ for(var i = 0; i < num_boxes; i++)
     var _box = boxes[i];
     var _struct = found_map_structs[i];
     _box.songtitle = _struct[$ "title"];
-    _box.songsub = _struct[$ "subtitle"];
+    _box.songsub = string_replace( _struct[$ "subtitle"], "--", "")
 }
 
 function update_box_positions() {
