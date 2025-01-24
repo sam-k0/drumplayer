@@ -6,6 +6,3 @@ if (input_by_arr(down_scroll_keys)) {
     scroll_down();
 }
 
-
-
-

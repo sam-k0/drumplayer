@@ -4,16 +4,20 @@ found_map_structs = find_map_files(working_directory + "/songs")
 
 // Define box positions
 boxes = [];
-box_spacing = 192;
+box_spacing = 200;
 box_x_anchor = 544;
-box_y_anchor = -64;
-num_boxes = 7;
+box_y_anchor = -300;
+num_boxes = 8;
 current_index = 0;
 max_index = array_length(found_map_structs)-1;
 
 // Controls
 up_scroll_keys = [ord("F"), ord("G")]
 down_scroll_keys = [ord("J"), ord("K")]
+
+u_time = shader_get_uniform(shd_rainbow, "time")
+
+
 
 // Create boxes
 for(var i = 0; i < num_boxes; i++)

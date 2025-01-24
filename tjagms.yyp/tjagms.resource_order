@@ -27,6 +27,8 @@
     {"name":"spr_sidenote","order":3,"path":"sprites/spr_sidenote/spr_sidenote.yy",},
     {"name":"spr_songEntry","order":17,"path":"sprites/spr_songEntry/spr_songEntry.yy",},
     {"name":"spr_songEntrySmall","order":16,"path":"sprites/spr_songEntrySmall/spr_songEntrySmall.yy",},
+    {"name":"sprbg_songselect_2","order":19,"path":"sprites/sprbg_songselect_2/sprbg_songselect_2.yy",},
+    {"name":"sprbg_songselect","order":18,"path":"sprites/sprbg_songselect/sprbg_songselect.yy",},
     {"name":"ts_lanebg","order":2,"path":"tilesets/ts_lanebg/ts_lanebg.yy",},
     {"name":"ts_laneborder","order":1,"path":"tilesets/ts_laneborder/ts_laneborder.yy",},
   ],
