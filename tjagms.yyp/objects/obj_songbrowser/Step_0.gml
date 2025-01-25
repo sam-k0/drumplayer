@@ -9,4 +9,9 @@ if (input_by_arr(down_scroll_keys)) {
 	audio_play_sound_ext({ sound: snd_katsu,
 							gain: 0.3});
 }
+// confirm
+if(input_by_arr(confirm_keys))
+{
+	confirm_song();
+}
 

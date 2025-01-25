@@ -12,12 +12,12 @@ current_index = 0;
 max_index = array_length(found_map_structs)-1;
 
 // Controls
-up_scroll_keys = [ord("F"), ord("G")]
-down_scroll_keys = [ord("J"), ord("K")]
+up_scroll_keys = [ord("K")]
+down_scroll_keys = [ ord("J")] // use katsu keys to move menu
+confirm_keys = [ord("G")] // Don to confirm
+back_keys = [ord("F")]
 
 u_time = shader_get_uniform(shd_rainbow, "time")
-
-
 
 // Create boxes
 for(var i = 0; i < num_boxes; i++)
@@ -96,3 +96,14 @@ function scroll_down() {
     
     update_box_positions()
 }
+
+// when song entry is selected
+function confirm_song()
+{
+	var acc = (current_index+num_boxes/2) % array_length(found_map_structs); // Current selection
+	var selected = found_map_structs[acc]; // Contains struct now
+	show_debug_message(selected);
+	
+	
+}
+

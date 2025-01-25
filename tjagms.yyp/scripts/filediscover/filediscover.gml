@@ -22,6 +22,7 @@ function get_song_meta(tjaFilePath) {
     var title = "";
     var subtitle = "";
     var file = file_text_open_read(tjaFilePath);
+    var difficulties = []
    
     while (!file_text_eof(file)) {
         var line = file_text_read_string(file);
@@ -36,9 +37,9 @@ function get_song_meta(tjaFilePath) {
             subtitle = string_trim(string_delete(line, 1, 9));
         }
         
-        // Exit early if both fields are found
-        if (title != "" && subtitle != "") {
-            break;
+        if (string_copy(line, 1, 7) == "COURSE:") {
+        	show_debug_message("Found difficulty label: {0}",line)
+        	array_push(difficulties,string_trim(string_delete(line, 1, 7)));
         }
     }
     
@@ -46,7 +47,7 @@ function get_song_meta(tjaFilePath) {
     file_text_close(file);
     
     // Return the extracted fields
-    return {title: title, subtitle: subtitle};
+    return {title: title, subtitle: subtitle, difficulties: difficulties};
 }
 
 
@@ -84,7 +85,8 @@ function find_map_files(_root_dir=working_directory)
 					subtitle : string_replace( _m[$ "subtitle"], "--", ""),
 					tja_file : _tja_file,
 					sound_file : _ogg_file,
-					dir_path : thisdir
+					dir_path : thisdir,
+					difficulties : _m[$ "difficulties"]
 				})
 			}
 			else // one of them missing
