@@ -1,5 +1,7 @@
 /// @description Discover songs
 
+show_debug_log(true)
+
 found_map_structs = find_map_files(working_directory + "/songs")
 
 // Define box positions
@@ -11,13 +13,22 @@ num_boxes = 8;
 current_index = 0;
 max_index = array_length(found_map_structs)-1;
 
+submenu_id = 0; // 0 = scroll, 1=difficulty
+
+enum MENU {
+	SONGLIST,
+	DIFFICULTY,
+}
+
+difficulty_selected = 0; // holds diff index
+
 // Controls
 up_scroll_keys = [ord("K")]
 down_scroll_keys = [ ord("J")] // use katsu keys to move menu
 confirm_keys = [ord("G")] // Don to confirm
 back_keys = [ord("F")]
 
-u_time = shader_get_uniform(shd_rainbow, "time")
+
 
 // Create boxes
 for(var i = 0; i < num_boxes; i++)
@@ -103,7 +114,30 @@ function confirm_song()
 	var acc = (current_index+num_boxes/2) % array_length(found_map_structs); // Current selection
 	var selected = found_map_structs[acc]; // Contains struct now
 	show_debug_message(selected);
-	
+}
+
+function diff_label_to_sprid(label)
+{
+	switch(label)
+	{
+		case "Easy":
+			return 0;
+		case "Normal":
+			return 1;
+		case "Hard":
+			return 2;
+		case "Oni":
+			return 3;
+		default:
+			return 0;
+	}
 	
 }
 
+function get_diff_arr_len()
+{
+	var acc = (current_index+num_boxes/2) % array_length(found_map_structs); // Current selection
+	var selected = found_map_structs[acc]; // Contains struct now
+	var diff_array = selected[$"difficulties"]
+	return array_length(diff_array);
+}

@@ -1,4 +1,5 @@
 /// @description Init variables
+// You can write your code in this editor
 globalvar CELL_COEFFICIENT; // How far to spread out cells
 CELL_COEFFICIENT = 2.0;
 
@@ -19,11 +20,13 @@ TIME_OFFSET = 0; // 1 = start one second later (given by OFFSET data)
 SUBTITLE = ""; // SUBTITLE field. --/++ modifier is removed
 BPM = 180;// BPM of the song
 
-// local variables
+globalvar TIME_OFFSET_STATIC, SONGFILE, MAPFILE;
+
 TIME_OFFSET_STATIC = 2*60; // for spawning notes further back, given in frames
 SONGFILE = "Evidence of evil.ogg";
 MAPFILE = "Evidence of evil.tja";
 
+// local variables
 show_debug_log(true)
 
 // Search songfiles
