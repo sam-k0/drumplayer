@@ -22,15 +22,7 @@ BPM = 180;// BPM of the song
 
 
 globalvar TIME_OFFSET_STATIC;
-TIME_OFFSET_STATIC = 2*60;
-/*globalvar TIME_OFFSET_STATIC, SONGFILE, MAPFILE;
-
-TIME_OFFSET_STATIC = 2*60; // for spawning notes further back, given in frames
-SONGFILE = "Evidence of evil.ogg";
-MAPFILE = "Evidence of evil.tja";
-
-
-*/
+TIME_OFFSET_STATIC = 2*60;// Frame offset to move notes further back (flat offset not affected by meta)
 // local variables
 show_debug_log(true)
 
