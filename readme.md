@@ -7,7 +7,9 @@ Provides a basic song browser and gameplay experience.
 # Song browser features
 - [x] List of detected songs
 - [x] Difficulty detection
-- [ ] Difficulty selection
+- [ ] Difficulty support (currently only 1 per file)
+- [x] Play selected songs
+- [x] Rainbow animation in bg
 
 # File format features
 A list of features can be found [here](https://github.com/269Seahorse/Better-taiko-web/blob/master/TJA-format.mediawiki).
