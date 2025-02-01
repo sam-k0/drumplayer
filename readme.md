@@ -13,6 +13,8 @@ Provides a basic song browser and gameplay experience.
 
 ... and many more missing
 
+![screenshot](img/game.png)
+
 # Platform Support
 Made in GameMaker 2.3, developed on Ubuntu.
 
