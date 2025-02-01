@@ -1,3 +1,5 @@
 
+globalvar SONGFILE, MAPFILE;
 
-//AMOGUS
+SONGFILE = "Evidence of evil.ogg";
+MAPFILE = "Evidence of evil.tja";

@@ -20,17 +20,22 @@ TIME_OFFSET = 0; // 1 = start one second later (given by OFFSET data)
 SUBTITLE = ""; // SUBTITLE field. --/++ modifier is removed
 BPM = 180;// BPM of the song
 
-globalvar TIME_OFFSET_STATIC, SONGFILE, MAPFILE;
+
+globalvar TIME_OFFSET_STATIC;
+TIME_OFFSET_STATIC = 2*60;
+/*globalvar TIME_OFFSET_STATIC, SONGFILE, MAPFILE;
 
 TIME_OFFSET_STATIC = 2*60; // for spawning notes further back, given in frames
 SONGFILE = "Evidence of evil.ogg";
 MAPFILE = "Evidence of evil.tja";
 
+
+*/
 // local variables
 show_debug_log(true)
 
 // Search songfiles
-
+show_debug_message("Reading from {0}", MAPFILE)
 var result = loadTaikoMap(MAPFILE);
 
 if(result)

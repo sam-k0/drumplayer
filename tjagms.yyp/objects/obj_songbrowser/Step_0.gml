@@ -60,12 +60,12 @@ if(input_by_arr(confirm_keys))
 			var acc = (current_index+num_boxes/2) % array_length(found_map_structs); // Current selection
 			var selected = found_map_structs[acc]; // Contains struct now
 			
-			/*MAPFILE = selected[$"dir_path"] + "/" + selected[$"tja_file"];
+			MAPFILE = selected[$"dir_path"] + "/" + selected[$"tja_file"];
 			SONGFILE = selected[$"dir_path"] + "/" + selected[$"sound_file"];
 			
 			show_debug_message(MAPFILE)
 			show_debug_message(SONGFILE)
-			*/
+			
 			room_goto(rm_songplay)
 			
 			break;
