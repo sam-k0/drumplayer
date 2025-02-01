@@ -4,6 +4,11 @@ A feature incomplete, experimental player for .tja files.
 
 Provides a basic song browser and gameplay experience.
 
+# Controls
+Not configurable yet, but:
+- F/G : Back/Confirm || Don left/right
+- J/K : Up/Down || Katsu left/right
+
 # Song browser features
 - [x] List of detected songs
 - [x] Difficulty detection
