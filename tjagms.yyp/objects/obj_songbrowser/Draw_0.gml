@@ -13,7 +13,16 @@ draw_sprite_ext(spr_songEntry, 0, //
 	boxes[4].y, 1.05,1.05,0,c_red,0.4)
 	
 // Draw controls
+
+var inputKeyArr = [(global.input_keys.KeyDonA), (global.input_keys.KeyDonB), (global.input_keys.KeyKatsuA), (global.input_keys.KeyKatsuB)]
+draw_set_halign(fa_center)
+draw_set_color(c_black)
 draw_sprite(spr_drumGame, 0, camera_width/4*3, camera_height-256)
+draw_sprite(spr_drumGame, controlvis_step+1, camera_width/4*3, camera_height-256)
+draw_text(camera_width/4*3 , camera_height-280, inputKeyArr[controlvis_step])
+draw_text(camera_width/4*3, camera_height-400, "Control scheme")
+draw_text(camera_width/4*3, camera_height-160, $"{inputKeyArr[0]}: Back\n{inputKeyArr[1]}: Confirm\n{inputKeyArr[2]}: Scroll Up\n{inputKeyArr[3]}: Scroll Down")
+
 
 // draw difficulty labels
 // Get the labels from current map
@@ -26,6 +35,7 @@ if(submenu_id == MENU.DIFFICULTY)
 	var ay = camera_height / 2;
 	
 	// Draw "select diff"
+	draw_set_color(c_white)
 	draw_set_font(fnt_trad_24)
 	draw_set_halign(fa_left)
 	draw_text(ax+8,ay-128, "Select difficulty")

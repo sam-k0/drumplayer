@@ -8,7 +8,7 @@ if(active)
 		var prev_x = x - scrollspeed; // Previous x position based on speed
 		if (collision_line(prev_x, y, x, y, obj_hitField, false, true)) 
 		{
-			if(true)
+			if(AUTOPLAY)
 			{
 			isHit()		
 			}

@@ -23,10 +23,13 @@ enum MENU {
 difficulty_selected = 0; // holds diff index
 
 // Controls
-up_scroll_keys = [ord("K")]
-down_scroll_keys = [ ord("J")] // use katsu keys to move menu
-confirm_keys = [ord("G")] // Don to confirm
-back_keys = [ord("F")]
+up_scroll_keys = [ord(global.input_keys.KeyKatsuB)]
+down_scroll_keys = [ ord(global.input_keys.KeyKatsuA)] // use katsu keys to move menu
+confirm_keys = [ord(global.input_keys.KeyDonB)] // Don to confirm
+back_keys = [ord(global.input_keys.KeyDonA)]
+// Visualizing control scheme
+controlvis_step = 0
+alarm[0] = game_get_speed(0) * 3
 
 
 

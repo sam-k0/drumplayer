@@ -7,6 +7,7 @@ var genlblw = 288; // width of the sprite
 var genlbloff = 32; // offset
 var bpmbgw = 168;
 var bpmbgoff = 32;
+
 // get ready to draw the song title
 draw_set_halign(fa_right)
 draw_text(vw-titleoff ,32,SONG_NAME);

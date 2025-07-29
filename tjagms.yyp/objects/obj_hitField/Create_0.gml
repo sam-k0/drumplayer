@@ -5,8 +5,8 @@ image_yscale = 1
 
 combo = 0;
 // Controls
-don_keys = [ord("F"), ord("G")];
-katsu_keys = [ord("J"), ord("K")];
+don_keys = [ord(global.input_keys.KeyDonA), ord(global.input_keys.KeyDonB)];
+katsu_keys = [ord(global.input_keys.KeyKatsuA), ord(global.input_keys.KeyKatsuB)];
 
 // Array to store key states (0 = not pressed, 1 = pressed)
 // This is also the alpha, so goes from 1 to 0 as used in drawing 

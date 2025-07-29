@@ -11,6 +11,7 @@
     {"name":"obj_songBox","order":9,"path":"objects/obj_songBox/obj_songBox.yy",},
     {"name":"obj_songbrowser_bg","order":10,"path":"objects/obj_songbrowser_bg/obj_songbrowser_bg.yy",},
     {"name":"obj_songbrowser","order":8,"path":"objects/obj_songbrowser/obj_songbrowser.yy",},
+    {"name":"rm_init","order":2,"path":"rooms/rm_init/rm_init.yy",},
     {"name":"rm_songselect","order":1,"path":"rooms/rm_songselect/rm_songselect.yy",},
     {"name":"filediscover","order":2,"path":"scripts/filediscover/filediscover.yy",},
     {"name":"taikoMapLoader","order":1,"path":"scripts/taikoMapLoader/taikoMapLoader.yy",},

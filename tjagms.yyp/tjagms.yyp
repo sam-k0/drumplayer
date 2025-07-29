@@ -1,8 +1,8 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"tjagms",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -25,6 +25,7 @@
     {"$GMFolder":"","%Name":"Tilesets","folderPath":"folders/Tilesets.yy","name":"Tilesets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"666.tja","CopyToMask":-1,"filePath":"datafiles","name":"666.tja","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"eoee.tja","CopyToMask":-1,"filePath":"datafiles","name":"eoee.tja","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -53,7 +54,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.0.157",
+    "IDEVersion":"2024.1400.0.849",
   },
   "name":"tjagms",
   "resources":[
@@ -69,6 +70,7 @@
     {"id":{"name":"obj_songbrowser_bg","path":"objects/obj_songbrowser_bg/obj_songbrowser_bg.yy",},},
     {"id":{"name":"obj_songbrowser","path":"objects/obj_songbrowser/obj_songbrowser.yy",},},
     {"id":{"name":"path_hit","path":"paths/path_hit/path_hit.yy",},},
+    {"id":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"id":{"name":"rm_songplay","path":"rooms/rm_songplay/rm_songplay.yy",},},
     {"id":{"name":"rm_songselect","path":"rooms/rm_songselect/rm_songselect.yy",},},
     {"id":{"name":"filediscover","path":"scripts/filediscover/filediscover.yy",},},
@@ -102,6 +104,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"roomId":{"name":"rm_songselect","path":"rooms/rm_songselect/rm_songselect.yy",},},
     {"roomId":{"name":"rm_songplay","path":"rooms/rm_songplay/rm_songplay.yy",},},
   ],

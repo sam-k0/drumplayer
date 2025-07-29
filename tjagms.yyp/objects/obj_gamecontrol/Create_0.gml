@@ -43,3 +43,7 @@ if(result)
 }
 
 instance_create_layer(x,y,"Instances", obj_hitField)
+
+
+show_debug_message(camera_get_view_width(view_camera[0]))
+show_debug_message(window_get_width())
