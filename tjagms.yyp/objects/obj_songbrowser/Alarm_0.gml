@@ -5,5 +5,3 @@ if(controlvis_step >= sprite_get_number(spr_drumGame)-1)
 {
 	controlvis_step = 0
 }
-
-show_debug_message(controlvis_step)

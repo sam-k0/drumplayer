@@ -1,12 +1,13 @@
 
 #macro INPUT_CONFIG_PATH "input.ini" 
-#macro AUTOPLAY true
 
-globalvar SONGFILE, MAPFILE;
+globalvar SONGFILE, MAPFILE, AUTOPLAY, ONLINE_MODE, DEBUG_MODE;
 
-SONGFILE = "Evidence of evil.ogg";
-MAPFILE = "Evidence of evil.tja";
-
+SONGFILE = "";
+MAPFILE = "";
+AUTOPLAY = true;
+ONLINE_MODE = false;
+DEBUG_MODE = false;
 
 // Check if the file exists, if not, create default mappings for keys
 if (!file_exists(INPUT_CONFIG_PATH)) {
@@ -21,7 +22,7 @@ if (!file_exists(INPUT_CONFIG_PATH)) {
 		"KeyDonA": "F",
 		"KeyDonB": "G",
 		"KeyKatsuA": "J",
-		"KeyKatsuB": "K"
+		"KeyKatsuB": "K",
 	}
 	ini_close()
 	
@@ -41,4 +42,5 @@ else {
 
 show_debug_message($"{global.input_keys} assigned." )
 
-alarm_set(0,20)
+controlvis_step = 0
+alarm[0] = game_get_speed(0) * 3

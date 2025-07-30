@@ -17,9 +17,9 @@ for (var i = 0; i < array_length(katsu_keys); i++) {
 // Check collision
 var don_key_pressed = max(key_states_don[0], key_states_don[1], 0 );
 var katsu_keys_pressed = max(key_states_katsu[0], key_states_katsu[1], 0 );
+var exit_key_pressed = keyboard_check_pressed(vk_escape);
 
-
-
+// Input handling
 if(don_key_pressed == 1)
 {
 	checkNoteCollision([1,3]); // 1 and 3 are type don and DON
@@ -28,4 +28,11 @@ if(katsu_keys_pressed == 1)
 {
 	checkNoteCollision([2,4]); // 2 and 4...
 }
+if(exit_key_pressed == 1)
+{
+	game_end();
+}
+
+
+
 ds_list_clear(next_notes_list);
