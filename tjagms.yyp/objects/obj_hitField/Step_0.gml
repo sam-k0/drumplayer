@@ -30,7 +30,7 @@ if(katsu_keys_pressed == 1)
 }
 if(exit_key_pressed == 1)
 {
-	game_end();
+	room_goto(rm_songselect);
 }
 
 

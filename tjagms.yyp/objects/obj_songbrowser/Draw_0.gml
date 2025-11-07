@@ -51,10 +51,11 @@ if(submenu_id == MENU.DIFFICULTY)
 		
 		if(difficulty_selected == i)
 		{
-			draw_sprite_ext(spr_difficultyIcon, did, ax+64*i, ay, 1.1,1.1,0,c_black,1);
+			// 100 is the magical number of space between the icons
+			draw_sprite_ext(spr_difficultyIcon, did, ax+100*i, ay, 1.1,1.1,0,c_black,1);
 		}
 		
-		draw_sprite(spr_difficultyIcon,did, ax+64*i,ay)
+		draw_sprite(spr_difficultyIcon,did, ax+100*i,ay)
 	}
 }
 
