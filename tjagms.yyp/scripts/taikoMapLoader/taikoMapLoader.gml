@@ -122,6 +122,13 @@ function getTaikoCommand(linestr)
 	    return 4;
 	}
 	
+	if(llen >= 4 && string_copy(linestr,2,3) == "END")
+	{
+	    return 5;
+	}
+	
+	
+	
 	return 0; // its raw data
 	
 	
@@ -154,29 +161,39 @@ function handleTaikoCmd(linestr, command)
 		return string_replace(linestr, "#SCROLL ", ""); // returns arg as str
 		break;		
 		
+		case 5: // #END
+		return "-1";
+		break;
+		
 	}
 }
 
-function interpretTaikoMap(_time_offset)
+function interpretTaikoMap(_time_offset, _difficulty_label)
 {
 	var rowCount = 1;	
 	var currUpper = 4; // Assuming 4/4 measure
 	var currLower = 4;
 	var currBPM = BPM; // Gets set in bottom, this is just placeholder
-	
+	var hasFoundDifficultyStart = false
+	var hasToStop = false
 	// Loop through the whole TJA Array storing the contents of the TJA file
 
 	show_debug_message("TJA ARRAY....")
 	for(var i = 0; i<array_length(TJA_ARRAY)-1; i++)
 	{
+		if(hasToStop) // Is true when hasFoundDiffic.. is true and an #END command is read
+		{
+			break;
+		}
+		
 		var line;
 		line = TJA_ARRAY[i];
+		
+		
 
 		// Get if current line is raw data or a command
-	
-		if(string_char_at(line,0) == "#")
+		if(string_char_at(line,0) == "#" && hasFoundDifficultyStart)// it is a command and we are interpreting
 		{
-			// it is a command
 			var cmd = getTaikoCommand(line); // get the cmd
 			var cmdarg = handleTaikoCmd(line,cmd); // get the args
 		
@@ -243,10 +260,14 @@ function interpretTaikoMap(_time_offset)
 				case 4: // SCROLL
 					CURRENT_SCROLL_COEFFICIENT = real(cmdarg);
 				break;	
-		
+				
+				case 5: // END
+					show_debug_message("Setting stop flag END")
+					hasToStop = true; // set to false again to basically stop
+				break;
 			}
 		}
-		else // its not a command#region Data
+		else // its not a command
 		{
 			// Is it data?
 			if(string_char_at(line,string_length(line)) == ",") // Checks if line ends with ,
@@ -333,7 +354,13 @@ function interpretTaikoMap(_time_offset)
 			
 			if(string_copy(line, 1,6) == "COURSE")
 			{
-				DIFFICULTY = string_trim(string_replace(line, "COURSE:","")) 
+				var diff= string_trim(string_replace(line, "COURSE:","")) 
+				if(diff == _difficulty_label)
+				{
+					DIFFICULTY = diff	
+					hasFoundDifficultyStart = true // now we can start interpreting
+					show_debug_message("Found correct label for difficulty: {0}", diff)
+				}
 			}
 			
 			if(string_copy(line, 1,8) == "SUBTITLE")

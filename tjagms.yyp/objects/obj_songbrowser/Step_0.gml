@@ -66,6 +66,10 @@ if(input_by_arr(confirm_keys))
 			show_debug_message(MAPFILE)
 			show_debug_message(SONGFILE)
 			
+			// Somehow pass the name of selected diff to next room...
+			var diff_array = selected[$"difficulties"];
+			SELECTED_DIFF = diff_array[difficulty_selected]
+			
 			room_goto(rm_songplay)
 			
 			break;

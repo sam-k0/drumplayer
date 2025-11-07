@@ -33,7 +33,10 @@ var result = loadTaikoMap(MAPFILE);
 if(result)
 {
 	readTaikoMap()
-	interpretTaikoMap(TIME_OFFSET_STATIC);
+	
+	show_debug_message("calling interpreter with diff {0}", SELECTED_DIFF)
+	
+	interpretTaikoMap(TIME_OFFSET_STATIC, SELECTED_DIFF);
 	// Start audio
 	instance_create_depth(0,0,0,obj_audiocontrol, {
 		songfile : SONGFILE,
