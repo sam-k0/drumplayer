@@ -221,7 +221,7 @@ function interpretTaikoMap(_time_offset, _difficulty_label)
 					var _len = string_length(cmdarg);
 					var _upper = "";
 					var _lower = "";
-					show_debug_message("Line 151: Cmdarg: "+cmdarg + "|| len: "+string(_len))
+					show_debug_message("MEASURE: "+cmdarg + "|| len: "+string(_len))
 			
 					var _iterator = 1;
 					var slashfound = false;
@@ -263,7 +263,7 @@ function interpretTaikoMap(_time_offset, _difficulty_label)
 				
 				case 5: // END
 					show_debug_message("Setting stop flag END")
-					hasToStop = true; // set to false again to basically stop
+					hasToStop = true; 
 				break;
 			}
 		}
@@ -308,6 +308,16 @@ function interpretTaikoMap(_time_offset, _difficulty_label)
 					{
 						continue;
 					}
+					
+					// Currently we only deal with notes 1,2,3,4 so the Drumrolls etc are not handled
+					if(is_int64(noteTypeChar))
+					{
+						if(int64(noteTypeChar) > 4)
+						{
+							noteTypeChar = "1" // normalize to 1 for now
+						}
+					}
+					
 					
 					var varStruct = { // Common variables
 					    scrollspeed: noteScrollSpeed

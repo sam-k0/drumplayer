@@ -1,6 +1,6 @@
 /// @description Discover songs
 
-show_debug_log(true)
+//show_debug_log(true)
 
 found_map_structs = find_map_files(working_directory + "/songs")
 
