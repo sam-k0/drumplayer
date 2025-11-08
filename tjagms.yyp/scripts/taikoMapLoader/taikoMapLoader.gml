@@ -54,7 +54,7 @@ function calcNoteScrollSpeed(__rowlen_px, __upper, __bpm)
     var pxperframe = pxpersecond / 60;  // divide by 60 to get per frame (fps = 60)
 
     // Apply the scroll coefficient (assuming CURRENT_SCROLL_COEFFICIENT is defined)
-    return pxperframe * 1//CURRENT_SCROLL_COEFFICIENT;  // apply the coefficient
+    return pxperframe * 1.0//CURRENT_SCROLL_COEFFICIENT;  // apply the coefficient
 }
 
 
@@ -176,6 +176,10 @@ function interpretTaikoMap(_time_offset, _difficulty_label)
 	var currBPM = BPM; // Gets set in bottom, this is just placeholder
 	var hasFoundDifficultyStart = false
 	var hasToStop = false
+
+	// Reset Scrollspeed for every song
+	CURRENT_SCROLL_COEFFICIENT = 1.0;
+
 	// Loop through the whole TJA Array storing the contents of the TJA file
 
 	show_debug_message("TJA ARRAY....")
